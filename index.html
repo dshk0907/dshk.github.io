@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
     <title>Океанариум</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 <header class="header">
+    <div class="header__background"></div>
     <div class="header-top">
-        <span class="logo">Океанариум</span>
+        <a href="" class="logo">Океанариум</a>
 
         <nav class="navigation">
             <ul class="menu">
                 <li class="menu-element">
-                    <a class="menu-element__link" href="">Об океанариуме</a>
+                    <a class="menu-element__link active" href="">Об океанариуме</a>
                 </li>
                 <li class="menu-element">
                     <a class="menu-element__link" href="">Тарифы</a>
@@ -28,7 +33,10 @@
     </div>
 
     <div class="header-center">
+        <div class="header-center__wrapper">
         <h1 class="name">Океанариум</h1>
+            <p class="description">Приветствуем вас в мире подводных обитателей и морских чудес!</p>
+        </div>
     </div>
 
 </header>
@@ -55,20 +63,28 @@
 <section class="price">
     <h2 class="second-title">Тарифы</h2>
     <ul class="price-filters">
-        <li class="price-filter">Дети</li>
-        <p class="price-filter__element">300&nbsp;рублей</p>
-        <li class="price-filter">Взрослые</li>
-        <p class="price-filter__element">450&nbsp;рублей</p>
+        <li class="price-filter">
+            Дети
+            <span class="price-filter__element">300&nbsp;рублей</span>
+        </li>
+        <li class="price-filter">
+            Взрослые
+            <span class="price-filter__element">450&nbsp;рублей</span>
+        </li>
     </ul>
 </section>
 
 <section class="time">
     <h2 class="second-title">График работы</h2>
     <ul class="time-filters">
-        <li class="time-filter">Выходные и праздники</li>
-        <p class="time-filter__element">10.00&nbsp;-&nbsp;20.00</p>
-        <li class="time-filter">Будние</li>
-        <p class="time-filter__element">9.00&nbsp;-&nbsp;21.00</p>
+        <li class="time-filter">
+            Выходные и праздники
+            <span class="time-filter__element">10.00&nbsp;-&nbsp;20.00</span>
+        </li>
+        <li class="time-filter">
+            Будние
+            <span class="time-filter__element">9.00&nbsp;-&nbsp;21.00</span>
+        </li>
     </ul>
 </section>
 

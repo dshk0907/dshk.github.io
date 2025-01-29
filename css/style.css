@@ -1,0 +1,82 @@
+:root {
+    --color-pink: #e500ff;
+    --background-blue-opacity: rgba(0, 0, 0, 0.48);
+}
+a {
+    color: var(--color-pink);
+    text-decoration: none;
+    transition: opacity .40s ease;
+}
+a:hover {
+    opacity: 80%;
+}
+.header {
+    position: relative;
+    height: 110vh;
+    background: url(../images/voda-zhivotnye-cherepakha-delfin-ryby.jpg) no-repeat center;
+    background-size: cover;
+    clip-path: circle(65.2% at 50% 28%);
+    z-index: 1;
+}
+.header__background {
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    background: rgb(0, 0, 0, .4);
+}
+.header-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 90px;
+
+    color: #d4b4df;
+    background: var(--background-blue-opacity);
+    z-index: 2;
+}
+.header-top a {
+    color: #d4b4df;
+}
+.header-top a.active {
+color: var(--color-pink);
+}
+.logo{
+    font-size: 41px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-element {
+    margin-right: 22px;
+    font-size: 22px;
+}
+.menu-element:last-child {
+    margin-right: 0;
+}
+.header-center {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 90px);
+    color: #d4b4df;
+    z-index: 2;
+}
+.header-center__wrapper {
+    width: 100%;
+    padding: 20px 0;
+    background: var(--background-blue-opacity);
+    text-align: center;
+}
+.name{
+    font-size: 145px;
+    line-height: 170px;
+}
+.description {
+    font-size: 35px;
+}
