@@ -11,26 +11,23 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header class="header">
-    <div class="header__background"></div>
-    <div class="header-top">
-        <a href="" class="logo">Океанариум</a>
+<div class="header-top">
+    <a href="#home" class="link logo">Океанариум</a>
 
-        <nav class="navigation">
-            <ul class="menu">
-                <li class="menu-element">
-                    <a class="menu-element__link active" href="">Об океанариуме</a>
-                </li>
-                <li class="menu-element">
-                    <a class="menu-element__link" href="">Тарифы</a>
-                </li>
-                <li class="menu-element">
-                    <a class="menu-element__link" href="">График</a>
-                </li>
-            </ul>
+    <nav class="navigation">
+        <ul class="menu">
+            <li class="menu-element">
+                <a class="link menu-element__link" href="#about-it">Об океанариуме</a>
+            </li>
+            <li class="menu-element">
+                <a class="link menu-element__link" href="#pricetime">Тарифы и график</a>
+            </li>
+        </ul>
 
     </nav>
-    </div>
+</div>
+<header class="header" id="home">
+    <div class="header__background"></div>
 
     <div class="header-center">
         <div class="header-center__wrapper">
@@ -41,51 +38,55 @@
 
 </header>
 
-<section class="about-it">
-    <div class="left"></div>
-    <img src="" alt="Наш океанариум" />
+<section class="about-it" id="about-it">
+    <div class="left">
+        <img src="images/okeanarium.jpg" alt="Наш океанариум" class="about-it__image"/>
+    </div>
     <div class="right">
         <h2 class="about-it__title">Добро пожаловать в наш океанариум!</h2>
-        <h2 class="about-it__description">Погрузитесь в удивительный подводный мир, где вы сможете познакомиться с разнообразием морской флоры и фауны. Наш океанариум предлагает уникальную возможность увидеть экзотических рыб, грациозных акул, ярких кораллов и других обитателей океана в их естественной среде обитания.</h2>
-        <h2 class="about-it__description">На территории океанариума вас ждут увлекательные выставки, интерактивные зоны и образовательные программы для детей и взрослых. Мы стремимся не только развлекать, но и просвещать наших посетителей о важности сохранения морских экосистем.</h2>
-        <h2 class="about-it__description">Приходите к нам всей семьей и откройте для себя захватывающий мир океанов!</h2>
+        <p class="about-it__description">Погрузитесь в удивительный подводный мир, где вы сможете познакомиться с разнообразием морской флоры и фауны. Наш океанариум предлагает уникальную возможность увидеть экзотических рыб, грациозных акул, ярких кораллов и других обитателей океана в их естественной среде обитания.</p>
+        <p class="about-it__description">На территории океанариума вас ждут увлекательные выставки, интерактивные зоны и образовательные программы для детей и взрослых. Мы стремимся не только развлекать, но и просвещать наших посетителей о важности сохранения морских экосистем.</p>
+        <p class="about-it__description">Приходите к нам всей семьей и откройте для себя захватывающий мир океанов!</p>
 
         <ul class="about-it__extra">
             <li class="about-it__extra-element">
-                <span class="bold">Адрес:</span>
+                <span class="about-it__extra-icon">
+                    <svg data-slot="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path clip-rule="evenodd" fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                    </svg>
+                </span>
+                <div class="about-it__extra-content">
+                <span class="about-it__extra-title bold">Адрес:</span>
                 <span>Улица Лимонная, 28</span>
+                </div>
             </li>
         </ul>
     </div>
 
 </section>
 
-<section class="price">
-    <h2 class="second-title">Тарифы</h2>
-    <ul class="price-filters">
-        <li class="price-filter">
-            Дети
-            <span class="price-filter__element">300&nbsp;рублей</span>
-        </li>
-        <li class="price-filter">
-            Взрослые
-            <span class="price-filter__element">450&nbsp;рублей</span>
-        </li>
+<section class="pricetime" id="pricetime">
+    <h2 class="second-title">Тарифы и график</h2>
+    <ul class="pricetime-filters block-center">
+        <li role="button" class="pricetime-filter active">Дети</li>
+        <li role="button" class="pricetime-filter">Взрослые</li>
     </ul>
-</section>
 
-<section class="time">
-    <h2 class="second-title">График работы</h2>
-    <ul class="time-filters">
-        <li class="time-filter">
-            Выходные и праздники
-            <span class="time-filter__element">10.00&nbsp;-&nbsp;20.00</span>
-        </li>
-        <li class="time-filter">
-            Будние
-            <span class="time-filter__element">9.00&nbsp;-&nbsp;21.00</span>
-        </li>
-    </ul>
+    <div class="pricetime-wrapper">
+            <div class="pricetime-list left">
+                <div class="pricetime-list__row">
+                <div class="pricetime-list__element">Будние</div>
+                <div class="pricetime-list__element">Выходные и праздники</div>
+            </div>
+            </div>
+            <div class="pricetime-card right">
+                <div class="pricetime-card__title">
+                    <span class="pricetime-card__name">Будние</span>
+                </div>
+                <p class="pricetime-card__description">350&nbsp;рублей</p>
+            </div>
+    </div>
+
 </section>
 
 <footer>
@@ -93,5 +94,8 @@
         &copy;&nbsp;Куматренко&nbsp;Дарья&nbsp;2004&nbsp;-&nbsp;2025
     </p>
 </footer>
+<script>
+    console.log("Hello world")
+</script>
 </body>
 </html>

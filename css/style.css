@@ -1,17 +1,15 @@
+/* Переменные */
 :root {
-    --color-pink: #e500ff;
+    --color-pink: #c570dd;
     --background-blue-opacity: rgba(0, 0, 0, 0.48);
+    --color-text: rgba(38, 38, 38, 0.71);
+    --color-pinky: #d4b4df;
+    --color-black: #262626;
 }
-a {
-    color: var(--color-pink);
-    text-decoration: none;
-    transition: opacity .40s ease;
-}
-a:hover {
-    opacity: 80%;
-}
+/* Header стили */
 .header {
     position: relative;
+    bottom: 90px;
     height: 110vh;
     background: url(../images/voda-zhivotnye-cherepakha-delfin-ryby.jpg) no-repeat center;
     background-size: cover;
@@ -25,22 +23,20 @@ a:hover {
     background: rgb(0, 0, 0, .4);
 }
 .header-top {
-    position: relative;
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 
     height: 90px;
 
-    color: #d4b4df;
+    color: var(--color-pinky);
     background: var(--background-blue-opacity);
-    z-index: 2;
+    z-index: 3;
 }
-.header-top a {
-    color: #d4b4df;
-}
-.header-top a.active {
-color: var(--color-pink);
+.header-top a.link {
+    color: var(--color-pinky);
 }
 .logo{
     font-size: 41px;
@@ -57,6 +53,9 @@ color: var(--color-pink);
 .menu-element:last-child {
     margin-right: 0;
 }
+.menu-element a.link:hover {
+    color: var(--color-pink);
+}
 .header-center {
     position: relative;
     display: flex;
@@ -64,7 +63,7 @@ color: var(--color-pink);
     align-items: center;
     justify-content: center;
     height: calc(100vh - 90px);
-    color: #d4b4df;
+    color: var(--color-pinky);
     z-index: 2;
 }
 .header-center__wrapper {
@@ -78,5 +77,203 @@ color: var(--color-pink);
     line-height: 170px;
 }
 .description {
+    display: inline-block;
+    width: 1000px;
     font-size: 35px;
+    line-height: 1,5em;
+    white-space: nowrap;
+    border-right: 4px solid transparent;
+    overflow: hidden;
+    animation: cursor 1s 5, print-text 4s steps(61);
+}
+@keyframes cursor {
+    0% {
+      border-color: transparent;
+    }
+    50% {
+        border-color: #d4b4df;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+@keyframes print-text {
+    from {
+        width: 0;
+    }
+    
+}
+/* Секция about-it */
+.about-it {
+    display: flex;
+    align-items: center;
+}
+.about-it .left {
+    flex: 1 1 40%;
+    padding-right: 50px;
+}
+.about-it .right {
+    flex: 1 1 60%;
+    padding-left: 20px;
+}
+.about-it__image {
+    width: 550px;
+    margin-left: auto;
+    border-radius: 10px;
+    filter: drop-shadow(10px 8px 15px #030240);;
+}
+.about-it__title {
+    font-size: 36px;
+}
+.about-it__description  {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--color-text);
+}
+.about-it__extra {
+    color: var(--color-text);
+}
+.about-it__extra-element {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.about-it__extra-element:last-of-type {
+    margin-bottom: 0;
+}
+.about-it__extra-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+.about-it__extra-icon svg {
+    color: #C570DDFF;
+}
+/* Секция price&time*/
+.pricetime {
+    padding: 60px 0 40px;
+}
+.pricetime-filters {
+    gap: 20px;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.pricetime-filter {
+    cursor: pointer;
+    transition: color .25s ease;
+}
+.pricetime-filter:hover {
+    color: var(--color-pink);
+}
+.pricetime-wrapper {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+.pricetime-wrapper .left {
+    flex: 1 1 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 70%;
+    padding-right: 50px;
+}
+.pricetime-list__row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.pricetime-list__element {
+    display: flex;
+    align-items: center;
+    flex: 1 1 50%;
+    max-width: 40%;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 0.3);
+    border-radius: 3px;
+    min-height: 110px;
+    padding: 10px;
+    padding-left: 40px;
+    font-size: 28px;
+    transition: all .1 ease;
+    cursor: pointer;
+}
+.pricetime-list__element:hover {
+    outline: 2px solid var(--color-pink);
+    transform: scale(105%);
+}
+.pricetime-wrapper .right {
+    flex: 1 1 50%;
+    padding: 0 0 20px 20px;
+    border-left: 2px solid var(--color-pinky);
+}
+.pricetime-card__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.pricetime-card__name {
+    flex: 1 1 70%;
+    padding-left: 20px;
+    font-size: 24px;
+}
+.pricetime-card__description {
+    color: var(--color-text);
+    text-align: justify;
+}
+/*Подвал сайта*/
+.footer-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    color: var(--color-text);
+}
+/* Общие стили */
+a.link {
+    color: var(--color-pink);
+    text-decoration: none;
+    transition: opacity .40s ease;
+}
+a.link:hover {
+    opacity: 80%;
+}
+.block-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bold {
+    font-weight: bold;
+    color: var(--color-black);
+}
+.block {
+    display: block;
+}
+.second-title {
+    position: relative;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.second-title:after {
+    --underline-width: 60px;
+    content: "";
+    display: inline-block;
+    width: var(--underline-width);
+    height: 2px;
+    position: absolute;
+    bottom: -8px;
+    left: calc(50% - var(--underline-width) / 2);
+    background: var(--color-pink);
+}
+.section-description {
+    margin-bottom: 40px;
+    font-size: 18px;
+    text-align: center;
+    color: var(--color-black);
+}
+.active {
+    color: var(--color-pink);
 }
