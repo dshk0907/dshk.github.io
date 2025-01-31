@@ -6,6 +6,7 @@
     --color-pinky: #d4b4df;
     --color-black: #262626;
 }
+
 /* Header стили */
 .header {
     position: relative;
@@ -28,9 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
     height: 90px;
-
     color: var(--color-pinky);
     background: var(--background-blue-opacity);
     z-index: 3;
@@ -80,7 +79,7 @@
     display: inline-block;
     width: 1000px;
     font-size: 35px;
-    line-height: 1,5em;
+    line-height: 1.5em;
     white-space: nowrap;
     border-right: 4px solid transparent;
     overflow: hidden;
@@ -88,7 +87,7 @@
 }
 @keyframes cursor {
     0% {
-      border-color: transparent;
+        border-color: transparent;
     }
     50% {
         border-color: #d4b4df;
@@ -101,7 +100,7 @@
     from {
         width: 0;
     }
-    
+
 }
 /* Секция about-it */
 .about-it {
@@ -153,74 +152,56 @@
 .pricetime {
     padding: 60px 0 40px;
 }
-.pricetime-filters {
+.pricetime-filters, .pricetime-day-filters {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
     gap: 20px;
-    font-size: 18px;
     margin-bottom: 40px;
 }
-.pricetime-filter {
+.pricetime-filter, .pricetime-day-filter {
     cursor: pointer;
     transition: color .25s ease;
+    font-size: 18px;
 }
-.pricetime-filter:hover {
+.pricetime-filter:hover, .pricetime-day-filter:hover {
     color: var(--color-pink);
+}
+.pricetime-filter.active, .pricetime-day-filter.active {
+    color: var(--color-pink);
+    font-weight: bold;
 }
 .pricetime-wrapper {
     display: flex;
-    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     margin: 0 auto;
 }
-.pricetime-wrapper .left {
-    flex: 1 1 50%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 20px;
-    max-width: 70%;
-    padding-right: 50px;
-}
-.pricetime-list__row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.pricetime-list__element {
-    display: flex;
-    align-items: center;
-    flex: 1 1 50%;
-    max-width: 40%;
-    box-shadow: 3px 3px 10px rgb(0 0 0 / 0.3);
-    border-radius: 3px;
-    min-height: 110px;
-    padding: 10px;
-    padding-left: 40px;
-    font-size: 28px;
-    transition: all .1 ease;
-    cursor: pointer;
-}
-.pricetime-list__element:hover {
-    outline: 2px solid var(--color-pink);
-    transform: scale(105%);
-}
-.pricetime-wrapper .right {
-    flex: 1 1 50%;
-    padding: 0 0 20px 20px;
-    border-left: 2px solid var(--color-pinky);
+.pricetime-card {
+    max-width: 600px;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: white;
+    text-align: center;
 }
 .pricetime-card__title {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 10px;
 }
 .pricetime-card__name {
-    flex: 1 1 70%;
-    padding-left: 20px;
     font-size: 24px;
 }
 .pricetime-card__description {
     color: var(--color-text);
-    text-align: justify;
+    text-align: center;
 }
 /*Подвал сайта*/
 .footer-about {

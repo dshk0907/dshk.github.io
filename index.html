@@ -68,25 +68,41 @@
 <section class="pricetime" id="pricetime">
     <h2 class="second-title">Тарифы и график</h2>
     <ul class="pricetime-filters block-center">
-        <li role="button" class="pricetime-filter active">Дети</li>
-        <li role="button" class="pricetime-filter">Взрослые</li>
+        <li role="button" class="pricetime-filter active" data-target="children">Дети</li>
+        <li role="button" class="pricetime-filter" data-target="adults">Взрослые</li>
     </ul>
-
+    <ul class="pricetime-day-filters block-center">
+        <li role="button" class="pricetime-day-filter active" data-type="weekday">Будние</li>
+        <li role="button" class="pricetime-day-filter" data-type="weekend">Выходные и праздники</li>
+    </ul>
     <div class="pricetime-wrapper">
-            <div class="pricetime-list left">
-                <div class="pricetime-list__row">
-                <div class="pricetime-list__element">Будние</div>
-                <div class="pricetime-list__element">Выходные и праздники</div>
+        <!-- Данные для детей -->
+        <div class="pricetime-card right" data-type="children" data-day="weekday">
+            <div class="pricetime-card__title">
+                <span class="pricetime-card__name">Будние</span>
             </div>
+            <p class="pricetime-card__description">350&nbsp;рублей</p>
+        </div>
+        <div class="pricetime-card right" data-type="children" data-day="weekend" style="display:none;">
+            <div class="pricetime-card__title">
+                <span class="pricetime-card__name">Выходные и праздники</span>
             </div>
-            <div class="pricetime-card right">
-                <div class="pricetime-card__title">
-                    <span class="pricetime-card__name">Будние</span>
-                </div>
-                <p class="pricetime-card__description">350&nbsp;рублей</p>
+            <p class="pricetime-card__description">400&nbsp;рублей</p>
+        </div>
+        <!-- Данные для взрослых -->
+        <div class="pricetime-card right" data-type="adults" data-day="weekday" style="display:none;">
+            <div class="pricetime-card__title">
+                <span class="pricetime-card__name">Будние</span>
             </div>
+            <p class="pricetime-card__description">500&nbsp;рублей</p>
+        </div>
+        <div class="pricetime-card right" data-type="adults" data-day="weekend" style="display:none;">
+            <div class="pricetime-card__title">
+                <span class="pricetime-card__name">Выходные и праздники</span>
+            </div>
+            <p class="pricetime-card__description">600&nbsp;рублей</p>
+        </div>
     </div>
-
 </section>
 
 <footer>
@@ -95,9 +111,6 @@
     </p>
 </footer>
 
-<script>
-
-
-</script>
+<script src="js/script.js"></script>
 </body>
 </html>
